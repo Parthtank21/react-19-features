@@ -1,3 +1,5 @@
+// https://react.dev/reference/react/forwardRef
+
 import React, { useImperativeHandle, useRef } from "react";
 
 function CustomInput({ ref, ...props }) {
@@ -14,7 +16,7 @@ function CustomInput({ ref, ...props }) {
     },
   }));
 
-  return <input type="text" ref={inpuRef} />;
+  return <input type="text" ref={inpuRef} {...props} />;
 }
 
 export default function NewFeature1() {
